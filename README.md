@@ -82,7 +82,20 @@ RUN apt-get -y update && \
 2. `git add` and `git push` the file `Dockerfile` to the repository.
 
 ```
-# Add your commands here
+touch Dockerfile
+# create the file
+
+nano Dockerfile
+# copy-paste the text
+
+git status
+# check the changed files (non-synchronized)
+
+git add Dockerfile
+git commit -m "Dockerfile created"
+git status
+git push
+
 ```
 
 ## Build and push Docker image

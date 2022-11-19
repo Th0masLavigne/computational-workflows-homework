@@ -86,7 +86,7 @@ touch Dockerfile
 # create the file
 
 nano Dockerfile
-# copy-paste the text
+# copy-paste the text. The file was slightly modified to have ubuntu 22.04
 
 git status
 # check the changed files (non-synchronized)
@@ -105,7 +105,12 @@ git push
    `<yourdockerhubusername>/computational-workflows`.
 
 ```
-# Add your commands here
+docker build .
+docker images
+docker tag sha256:1100e3714c29 th0maslavigne/computational-workflows:22.04
+docker images
+# LOG IN step not shown
+docker push th0maslavigne/computational-workflows:22.04
 ```
 
 ## Run a container, and share in files from the host.

@@ -120,7 +120,7 @@ docker push th0maslavigne/computational-workflows:22.04
    an interactive prompt inside the running container.
 
 ```
-# Add your commands here
+docker run -ti -v $(pwd):/root/shared th0maslavigne/computational-workflows:22.04
 ```
 
 ## Setup a simple Python test suite

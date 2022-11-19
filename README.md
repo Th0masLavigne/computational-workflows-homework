@@ -131,14 +131,19 @@ docker run -ti -v $(pwd):/root/shared th0maslavigne/computational-workflows:22.0
    repository.  ``git add``, ``git commit`` and ``git push`` them.
 
 ```
-# Add your commands here
+touch wallet.py
+touch test_wallet.py
+# copy paste the content
+git add .
+git commit -m "Python testing"
+git push
 ```
 
 2. Start a Docker container using your image and share your repository into a
    directory `/root/shared` into the container.
 
 ```
-# Add your commands here
+docker run -ti -v $(pwd):/root/shared th0maslavigne/computational-workflows:22.04
 ```
 
 3. Run the tests inside the container by going to `/root/shared` and running the

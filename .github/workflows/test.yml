@@ -1,0 +1,15 @@
+name: Run tests
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    container: th0maslavigne/computational-workflows:22.04
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          python3 -m pytest
